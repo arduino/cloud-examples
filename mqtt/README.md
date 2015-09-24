@@ -6,7 +6,7 @@ All examples require you to supply your own Arduino Cloud MQTT service credentia
 
 This series of examples is based on [pubsubclient](https://github.com/knolleary/pubsubclient) Arduino Client for MQTT library by Nick O'Leary ([@knolleary](https://github.com/knolleary)).
 
-## (MQTT Send Digital)[mqtt_send_digital]
+## [MQTT Send Digital](mqtt_send_digital)
 
 This example updates the Arduino Cloud MQTT broker service with the status of an LED which is controlled by a pushbutton.
 
@@ -14,8 +14,8 @@ An Arduino WiFi shield 101 is used to connect securely to the broker service usi
 
 To run:
 
- 1. Install the ```PubSubClient``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries).
- 1. Install the ```WiFi101``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries).
+ 1. Install the ```PubSubClient``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries...).
+ 1. Install the ```WiFi101``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries...).
  1. Connect the WiFi Shield 101 to your Arduino or Genuino board.
  1. Wire the LED and pushbutton as shown in the diagram below.
  1. Connect your Arduino or Genuino board to your computer using a USB cable.
