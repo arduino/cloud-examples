@@ -35,8 +35,8 @@ $(document).ready(function() {
   function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
     console.log("connected");
-    client.subscribe(MQTTqueue);
-    console.log("subscribed to " + MQTTqueue);
+    client.subscribe(mqttTopic);
+    console.log("subscribed to " + mqttTopic);
   }
 
   // attach event listeners to the slider
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   $('.slider').on("slideStop", function(slideEvt) {
     switchTo(slideEvt.value);
-    sendMessage(MQTTqueue, "" + slideEvt.value);
+    sendMessage(mqttTopic, "" + slideEvt.value);
   });
 
 
