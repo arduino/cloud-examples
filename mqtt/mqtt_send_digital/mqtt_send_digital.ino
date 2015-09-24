@@ -54,7 +54,7 @@ void setup() {
   // Initialize serial and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for Leonardo only
+    ; // wait for serial port to connect. Needed for native USB port only
   }
 
   setupWiFi();
@@ -114,6 +114,9 @@ void setupWiFi() {
 }
 
 void loop() {
+  // let the MQTT client process events
+  mqttClient.loop();
+  
   // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
 
