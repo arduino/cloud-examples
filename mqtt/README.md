@@ -40,7 +40,7 @@ To run:
  1. Update the MQTT settings at the top of the file.
  1. Open ``index.html`` in a Web Browser
 
-An image of a lamp is display on the page, it will update when the pushbutton is pressed and released.
+An image of a light bulb is display on the page, it will update when the pushbutton is pressed and released.
 
 ![Web UI screenshot](web-interface/webpanel.png)
 
