@@ -5,9 +5,6 @@ var mqttUsername       = "username";                  // your MQTT username
 var mqttPassword       = "password";                  // your MQTT password
 var mqttTopic          = "/" + mqttUsername + "/001"; // your MQTT topic /<username>/topic
 
-// variable for slider value
-var sliderValue = 0;
-
 // wait for page to be reader
 $(document).ready(function() {
   // Create a client instance,
