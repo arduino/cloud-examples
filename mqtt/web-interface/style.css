@@ -1,38 +1,5 @@
-#buttonSwitch{
-
-}
-
-#buttonSwitch.on{
-	background-color:yellow !important;
-}
-
-#buttonSwitch.off{
-	background-color:transparent !important;
-}
-
-.btn-huge{
-	width:100%;
-	height:100px;
-	-moz-border-radius: 18px  !important;
-	-webkit-border-radius: 18px  !important;
-	border-radius: 18px !important;
-
-	font-size: 70px;
-	padding-top: 0px;
-
-	border: 3px solid black;
-}
-
-.debug{
-	background-color: #afafaf;
-}
-
 .row{
 	margin-top: 20px;
-}
-
-.slider{
-	width:100% !important;
 }
 
 .col-centered{

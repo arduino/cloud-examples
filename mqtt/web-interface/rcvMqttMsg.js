@@ -10,11 +10,6 @@ var sliderValue = 0;
 
 // wait for page to be reader
 $(document).ready(function() {
-  // initiliaze slider
-  var mySlider = $('.slider').slider({
-    disabled: true
-  });
-
   // Create a client instance,
   // uses the paho library (https://www.eclipse.org/paho/clients/js/)
   client = new Paho.MQTT.Client(mqttBrokerURI, mqttClientName);
@@ -39,18 +34,6 @@ $(document).ready(function() {
     console.log("subscribed to " + mqttTopic);
   }
 
-  // attach event listeners to the slider
-  $('.slider').on("slide", function(slideEvt) {
-    switchTo(slideEvt.value);
-    console.log("sliding");
-  });
-
-  $('.slider').on("slideStop", function(slideEvt) {
-    switchTo(slideEvt.value);
-    sendMessage(mqttTopic, "" + slideEvt.value);
-  });
-
-
   // called when the client loses its connection
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
@@ -71,38 +54,12 @@ $(document).ready(function() {
     }
   }
 
-  $("#buttonSwitch").click(function() {
-    if ($("#buttonSwitch").hasClass("on")){
-       switchoff();
-       sendMessage(mqttTopic, "0");
-     } else {
-      switchOn();
-      sendMessage(mqttTopic, "255");
-    }
-  });
-
   function switchOn() {
-    $("#buttonSwitch").addClass("on").removeClass("off");
-    $("#buttonSwitch").html("off");
-
-    mySlider.slider('setValue', 255);
-
     $(".intensity").fadeTo( "fast" , 1)
   }
 
   function switchoff() {
-    $("#buttonSwitch").addClass("off").removeClass("on");
-    $("#buttonSwitch").html("on");
-
-    mySlider.slider('setValue', 0);
-
     $(".intensity").fadeTo( "fast", 0)
-  }
-
-  function switchTo(val) {
-    mySlider.slider('setValue', val);
-
-    $(".intensity" ).fadeTo("fast" , val / 255);
   }
 
   function sendMessage(destination, val) {
