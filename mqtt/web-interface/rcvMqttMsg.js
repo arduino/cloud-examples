@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log(message);
     console.log("new message arrived:" + message.payloadString);
 
-    if (message.payloadString == 0 ) {
+    if (message.payloadString === "0") {
       switchoff();
-    } else if (message.payloadString == 255) {
+    } else if (message.payloadString === "255") {
       switchOn();
     }
   }
