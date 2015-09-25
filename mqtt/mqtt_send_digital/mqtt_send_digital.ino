@@ -33,6 +33,15 @@ char mqttUsername[]   = "username";       // your MQTT username
 char mqttPassword[]   = "password";       // your MQTT password
 char mqttTopic[]      = "/username/001";  // your MQTT topic /<username>/topic
 
+// You can also access the MQTT broker service
+// using the same set of credentials using
+// WebSockets via the following URI:
+//
+//   wss://mqtt.arduino.cc:9002/
+//
+// This would allow you to subscribe and publish
+// to MQTT topics using a web browser.
+
 // constants won't change. They're used here to
 // set pin numbers:
 const int buttonPin   = 2;     // the number of the pushbutton pin
@@ -70,8 +79,8 @@ void setup() {
 
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
-  // initialize the pushbutton pin as an input:
-  pinMode(buttonPin, INPUT);
+  // initialize the pushbutton pin as an input pullup:
+  pinMode(buttonPin, INPUT_PULLUP);
 }
 
 void setupWiFi() {
@@ -127,8 +136,8 @@ void loop() {
     oldButtonState = buttonState;
 
     // check if the pushbutton is pressed.
-    // if it is, the buttonState is HIGH:
-    if (buttonState == HIGH) {
+    // if it is, the buttonState is LOW:
+    if (buttonState == LOW) {
       Serial.println(F("Button pressed"));
       
       // turn LED on:
