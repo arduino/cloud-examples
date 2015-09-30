@@ -44,3 +44,10 @@ An image of a light bulb is display on the page, it will update when the pushbut
 
 ![Web UI screenshot](web-interface/webpanel.png)
 
+## [Node.js Client](Node.js)
+
+See [Node.js](Node.js) folder, it contains a publisher and subscriber example.
+
+## [Python Client](python)
+
+See [Python](python) folder, it contains a publisher and subscriber example.
