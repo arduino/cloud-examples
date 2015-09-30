@@ -1,0 +1,9 @@
+{
+  "name": "arduino-cloud-mqtt-client-example",
+  "version": "1.0.0",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "mqtt": "^1.4.1"
+  }
+}
