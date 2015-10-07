@@ -1,6 +1,6 @@
 // constants
 var mqttBrokerURI      = "wss://mqtt.arduino.cc:9002/";
-var mqttClientName     = "browser";
+var mqttClientName     = "browser-" + (new Date().getTime());
 var mqttUsername       = "username";                  // your MQTT username
 var mqttPassword       = "password";                  // your MQTT password
 var mqttTopic          = "/" + mqttUsername + "/001"; // your MQTT topic /<username>/topic
