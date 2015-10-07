@@ -40,7 +40,7 @@ def on_publish(client, userdata, mid):
 client = mqtt.Client()
 
 # configure CA cert for SSL connection
-client.tls_set("arduino.cc.crt")
+client.tls_set("ca.crt")
 
 # set username and password
 client.username_pw_set(username, password)
