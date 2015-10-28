@@ -36,7 +36,7 @@ The Web UI example visualizes the mesages sent by the Arduino MQTT client. It us
 To run:
 
  1. Download the entire ``web-interface`` folder.
- 1. Open the ``rcvMqttMsg.js`` file in a text editor.
+ 1. Open the ``main.js`` file in a text editor.
  1. Update the MQTT settings at the top of the file.
  1. Open ``index.html`` in a Web Browser
 
