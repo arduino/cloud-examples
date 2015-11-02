@@ -35,7 +35,10 @@ The Web UI example visualizes the mesages sent by the Arduino MQTT client. It us
 
 To run:
 
- 1. Download the entire ``web-interface`` folder.
+ 1. Download the source from this repository. By either:
+   * Downloading and extracting [cloud-examples-master.zip](https://github.com/arduino/cloud-examples/archive/master.zip)
+   * Or cloning the repository using ``git``
+ 1. Go into the ``mqtt/web-interface`` folder.
  1. Open the ``main.js`` file in a text editor.
  1. Update the MQTT settings at the top of the file.
  1. Open ``index.html`` in a Web Browser
