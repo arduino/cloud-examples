@@ -17,7 +17,7 @@ To run:
  1. Install the ```PubSubClient``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries...).
  1. Install the ```WiFi101``` library using the Arduino IDE library manager (Sketch -> Include Library -> Manage Libraries...).
  1. Connect the WiFi Shield 101 to your Arduino or Genuino board.
- 1. Wire the LED and pushbutton as shown in the diagram below.
+ 1. Wire the LED and pushbutton as shown in the diagram below. **Note:** if you are using the Uno, wire the LED to pin 3 instead of 13.
  1. Connect your Arduino or Genuino board to your computer using a USB cable.
  1. Open the ``mqtt_send_digital.ino`` sketch in the Arduino IDE.
  1. Update the WiFi settings and MQTT settings in the sketch file.
